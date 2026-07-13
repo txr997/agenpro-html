@@ -1,0 +1,111 @@
+/* 
+    about-1-start
+*/
+.ap-about-1 {
+    &-sec-title {
+        display: flex;
+        gap: 50px;
+        flex-wrap: wrap;
+        justify-content: space-between;
+
+        .left {
+            max-width: 680px;
+        }
+    }
+    &-video {
+        max-width: 306px;
+        height: 200px;
+        width: 100%;
+        border-radius: 16px;
+        position: relative;
+        z-index: 1;
+
+        &-btn {
+            position: absolute;
+            inset: 0;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+    }
+
+
+    &-wrap {
+        display: flex;
+        gap: 50px;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        margin-top: 70px;
+    }
+    
+    &-left {
+        max-width: 405px;
+        width: 100%;
+
+        .left-disc {
+            margin-bottom: 70px;
+        }
+        
+    }
+    
+    &-counter {
+        display: flex;
+        align-items: end;
+        gap: 20px;
+        position: relative;
+        z-index: 1;
+        margin-bottom: 80px;
+
+        &::after {
+            content: "";
+            width: 70px;
+            height: 3px;
+            background-color: var(--ap-clr-pr-1);
+            position: absolute;
+            top: 0;
+            left: 100px;
+        }
+
+        .number {
+            font-size: 72px;
+            color: var(--ap-clr-pr-1);
+            margin-bottom: 0;
+        }
+
+        .disc {
+            margin-bottom: 10px;
+        }
+    }
+    
+    
+    &-img {
+        width: 440px;
+        height: 540px;
+        border-radius: 16px;
+    }
+    
+    &-right {
+        max-width: 245px;
+        width: 100%;
+        align-self: center;
+
+        .right-subtitle {
+            font-size: 18px;
+            color: var(--ap-clr-pr-1);
+            margin-bottom: 25px;
+        }
+
+        .right-title {
+            font-size: 24px;
+            margin-bottom: 80px;
+        }
+    }
+    
+}
+
+/* 
+    about-1-end
+*/

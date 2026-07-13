@@ -1,0 +1,36 @@
+/* 
+    marquee-text-1-start
+*/
+.ap-marquee-text-1 {
+    &-area {
+        background-color: var(--ap-clr-pr-1);
+        padding-top: 36px;
+        padding-bottom: 32px;
+    }
+
+    &-wrap {
+        display: flex;
+        align-items: center;
+
+        .single-item {
+            flex: 0 0 auto;
+            display: flex;
+            align-items: center;
+            gap: 14px;
+            margin-left: 15px;
+            font-size: 32px;
+
+            @media #{$xs} {
+                font-size: 24px;
+            }
+
+            @media #{$sm} {
+                font-size: 28px;
+            }
+        }
+    }
+    
+}
+/* 
+    marquee-text-1-end
+*/

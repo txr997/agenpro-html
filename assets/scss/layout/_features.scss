@@ -1,0 +1,146 @@
+/* 
+    features-1-start
+*/
+.ap-features-1 {
+    &-sec-title {
+        display: flex;
+        align-items: center;
+        gap: 40px;
+        flex-wrap: wrap;
+        justify-content: space-between;
+
+        .left {
+            max-width: 660px;
+        }
+
+        .right {
+            max-width: 385px;
+        }
+
+        .sec-disc {
+            margin-bottom: 34px;
+        }
+        
+    }
+
+
+    &-wrap {
+        display: flex;
+        gap: 50px;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+    
+    &-left {
+        max-width: 636px;
+        width: 100%;
+
+        @media #{$xl,$lg,$md} {
+            max-width: 416px;
+        }
+
+        .vector-1 {
+            mix-blend-mode: lighten;
+
+            img {
+                animation: ap-vector-color-shift 4s linear infinite;
+            }
+        }
+    }
+    
+    &-img {
+        height: 300px;
+        border-radius: 16px;
+        margin-bottom: 70px;
+    }
+    
+    &-counter {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 24px;
+        margin-bottom: 100px;
+
+        .number {
+            font-size: 48px;
+            color: var(--ap-clr-pr-1);
+            line-height: 1;
+            margin-bottom: 24px;
+        }
+
+        .disc {
+            padding-top: 20px;
+            border-top: 1px solid rgb(223 223 223 / 40%);
+        }
+    }
+    
+    
+    &-card {
+        max-width: 526px;
+        display: flex;
+        flex-direction: column;
+        gap: 24px;
+
+        @media #{$xl,$lg,$md} {
+            max-width: 416px;
+        }
+
+        &-single {
+            background-color: #171717;
+            padding: 36px 36px;
+            display: flex;
+            gap: 24px;
+            border-radius: 12px;
+            transition: var(--ap-cube-1);
+
+            @media #{$xl,$lg,$md,$xs} {
+                padding: 36px 20px;
+            }
+
+            .icon {
+                width: 36px;
+                height: 36px;
+                background: var(--ap-clr-pr-1);
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                border-radius: 50%;
+                flex: 0 0 auto;
+                transition: var(--ap-cube-1);
+
+                img {
+                    transition: var(--ap-cube-1);
+                }
+            }
+
+            .title {
+                font-size: 24px;
+                margin-bottom: 20px;
+                transition: var(--ap-cube-1);
+
+                @media #{$xl,$lg,$md,$xs} {
+                    font-size: 20px;
+                }
+            }
+
+            .disc {
+                transition: var(--ap-cube-1);
+            }
+
+            &:hover {
+                background-color: var(--ap-clr-pr-1);
+
+                .icon {
+                    background-color: #fff;
+
+                    img {
+                        filter: brightness(0) saturate(100%) invert(39%) sepia(100%) saturate(618%) hue-rotate(327deg) brightness(91%) contrast(129%);
+                    }
+                }
+            }
+        }
+    }
+
+}
+/* 
+    features-1-end
+*/

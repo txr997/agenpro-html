@@ -31,6 +31,22 @@
         display: grid;
         grid-template-columns: 1fr 1fr 1fr 1fr;
         gap: 24px;
+
+        @media #{$lg} {
+            grid-template-columns: 1fr 1fr 1fr;
+        }
+
+        @media #{$md} {
+            grid-template-columns: 1fr 1fr;
+        }
+
+        @media #{$xs} {
+            grid-template-columns: 1fr;
+        }
+
+        @media #{$sm} {
+            grid-template-columns: 1fr 1fr;
+        }
     }
 
     &-card {
@@ -84,7 +100,7 @@
             transition: var(--ap-cube-1);
         }
 
-        &:hover {
+        &:is(.active) {
             &::after {
                 height: 100%;
                 background-color: var(--ap-clr-pr-1);

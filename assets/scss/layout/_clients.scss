@@ -1,0 +1,92 @@
+/* 
+    clients-1-start
+*/
+.ap-clients-1 {
+    &-area {
+        background-color: #171717;
+    }
+
+    &-top {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+
+        @media #{$md,$xs} {
+            grid-template-columns: 1fr;
+        }
+
+        &-right {
+            display: flex;
+            align-items: center;
+            justify-content: end;
+            flex-wrap: wrap;
+            gap: 60px;
+        }
+    }
+
+    &-sec-title {
+        @media #{$md,$xs} {
+            margin-bottom: 60px;
+        }
+    }
+
+    &-projects {
+        max-width: 240px;
+
+        .number {
+            font-size: 56px;
+            margin-bottom: 0;
+            line-height: 1;
+            margin-bottom: 20px;
+        }
+    }
+    
+    &-rating {
+        .number {
+            font-size: 56px;
+            line-height: 1;
+            margin-bottom: 17px;
+        }
+
+        .rating-star {
+            font-size: 20px;
+            font-weight: 500;
+            opacity: 1;
+            display: flex;
+            gap: 5px;
+            margin-bottom: 10px;
+
+            i {
+                font-size: 16px;
+                margin-top: 4px;
+                color: #FFB400;
+            }
+            
+        }
+    }
+
+    &-logo {
+        display: flex;
+        justify-content: center;
+        gap: 24px;
+        flex-wrap: wrap;
+        justify-content: center;
+
+        &-single {
+            background: #1B1B1B;
+            width: 240px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 86px;
+            border-radius: 12px;
+        }
+    }
+}
+
+
+
+
+
+/* 
+    clients-1-end
+*/

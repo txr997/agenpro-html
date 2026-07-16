@@ -114,3 +114,67 @@
 /* 
     about-1-end
 */
+
+/* 
+    about-2-start
+*/
+.ap-about-2 {
+    &-wrap {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 50px;
+        justify-content: space-between;
+    }
+
+    &-left {
+        max-width: 746px;
+        width: 100%;
+    }
+
+    &-img {
+        max-width: 416px;
+        width: 100%;
+        height: 495px;
+        border-radius: 16px;
+    }
+
+    &-left {
+        &-inner {
+            display: flex;
+            gap: 90px;
+        }
+    
+    }    
+
+    &-exp {
+        flex: 0 0 auto;
+        line-height: 1;
+
+        .number {
+            font-size: 200px;
+            font-weight: 300;
+            display: flex;
+            line-height: 1;
+
+            .plus {
+                font-size: 50px;
+            }
+        }
+    }
+
+
+    &-content {
+        border-left: 1px solid #1F1F1F;
+        padding-left: 48px;
+
+        .disc {
+            margin-bottom: 45px;
+        }
+    }
+    
+}
+
+
+/* 
+    about-2-end
+*/

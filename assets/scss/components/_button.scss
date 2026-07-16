@@ -102,3 +102,32 @@
         color: var(--ap-clr-pr-1);
     }
 }
+
+
+.ap-circle-btn-1 {
+    background-color: var(--ap-clr-pr-1);
+    border-radius: 50%;
+    width: 160px;
+    height: 160px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    padding: 15px;
+    outline: 6px solid #000;
+    transition: var(--ap-cube-1);
+
+    .btn-icon {
+        position: absolute;
+        font-size: 24px;
+        color: #fff;
+    }
+
+    .circle-img {
+        animation: wa-rotated-minus 10s linear infinite;
+    }
+
+    &:hover {
+        background-color: #000;
+    }
+}

@@ -216,3 +216,139 @@
 /* 
     hero-1-end
 */
+
+/* 
+    hero-2-start
+*/
+.ap-hero-2 {
+    &-area {
+        padding-top: 250px;
+
+        @media #{$xs} {
+            padding-top: 150px;
+        }
+    }
+    &-video {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        z-index: -1;
+        height: 65%;
+
+        @media #{$xs} {
+            height: 95%;
+        }
+
+        &::after {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: #111111;
+            opacity: 80%;
+        }
+    }
+
+    &-content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        position: relative;
+        z-index: 1;
+
+        .btn-x-author {
+            display: inline-flex;
+            gap: 32px;
+            flex-wrap: wrap;
+            margin-bottom: 105px;
+            
+            .ap-hero-1-clients {
+                margin-bottom: 0;
+                max-width: 351px;
+            }
+        }
+    }
+
+    &-subtitle {
+        font-size: 16px;
+        color: var(--ap-clr-pr-1);
+        font-weight: 500;
+        margin-bottom: 20px;
+        text-align: center;
+    }
+
+    &-title {
+        text-align: center;
+        font-size: 72px;
+        line-height: 120%;
+        margin-bottom: 40px;
+
+        span {
+            color: var(--ap-clr-pr-1);
+        }
+
+
+        @media #{$xl} {
+            font-size: 65px;
+        }
+
+        @media #{$lg} {
+            font-size: 50px;
+        }
+
+        @media #{$md} {
+            font-size: 45px;
+        }
+
+        @media #{$xs} {
+            font-size: 35px;
+        }
+
+        @media #{$sm} {
+            font-size: 40px;
+        }
+    }
+
+    &-circle-btn {
+        display: flex;
+        justify-content: end;
+        width: 100%;
+        padding-right: 100px;
+    }
+
+
+    &-gallery {
+        mask-size: 100% 100%;
+        margin-top: -120px;
+        background-color: #111111;
+
+        &-wrap {
+            display: flex;
+            gap: 32px;
+            margin-right: 32px;
+        }
+        
+        &-single {
+            height: 535px;
+            max-width: 650px;
+            width: 100%;
+            flex: 0 0 auto;
+
+            @media #{$xs} {
+                max-width: 300px;
+                height: 250px;
+            }
+        }
+    }
+}
+
+
+
+
+
+/* 
+    hero-2-end
+*/

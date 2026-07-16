@@ -93,6 +93,20 @@
             font-size: 20px;
             margin-bottom: 22px;
             transition: var(--ap-cube-1);
+
+            a {
+                display: inline;
+                color: inherit;
+                background-image: linear-gradient(currentColor, currentColor);
+                background-repeat: no-repeat;
+                background-position: left 100%;
+                background-size: 0% 1px;
+                transition: var(--ap-cube-1);
+
+                &:hover {
+                    background-size: 100% 1px;
+                }
+            }
         }
 
         .disc {

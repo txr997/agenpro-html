@@ -9,6 +9,12 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    transition: var(--ap-cube-1);
+
+    &:hover {
+        background-color: var(--ap-clr-pr-1);
+        color: #fff;
+    }
 }
 
 .ap-pr-btn-1 {
@@ -89,4 +95,10 @@
     background-color: var(--ap-clr-pr-1);
     border-radius: 50%;
     color: #fff;
+    transition: var(--ap-cube-1);
+
+    &:hover {
+        background-color: #fff;
+        color: var(--ap-clr-pr-1);
+    }
 }

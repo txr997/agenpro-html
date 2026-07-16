@@ -27,10 +27,49 @@
             @media #{$sm} {
                 font-size: 28px;
             }
+
         }
     }
     
 }
 /* 
     marquee-text-1-end
+*/
+/* 
+    marquee-text-2-start
+*/
+.ap-marquee-text-2 {
+    &-area {
+        background-color: #171717;
+    }
+    
+    &-wrap {
+        display: flex;
+        align-items: center;
+
+        .single-item {
+            display: flex;
+            align-items: center;
+            gap: 32px;
+            font-weight: 400;
+            font-size: 92px;
+            flex: 0 0 auto;
+            margin-right: 32px;
+            color: rgb(255 255 255 / 60%);
+            transition: var(--ap-cube-1);
+
+            &:hover {
+                color: #fff;
+            }
+
+            
+            img {
+                animation: wa-rotated-minus 10s linear infinite;
+            }
+        }
+    }
+}
+
+/* 
+    marquee-text-2-end
 */

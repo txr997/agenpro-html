@@ -82,9 +82,20 @@
             @media #{$lg,$md,$xs} {
                 font-size: 24px;
             }
-            
-            &:hover {
-                color: var(--ap-clr-pr-1);
+
+            a {
+                display: inline;
+                color: inherit;
+                background-image: linear-gradient(currentColor, currentColor);
+                background-repeat: no-repeat;
+                background-position: left 100%;
+                background-size: 0% 1px;
+                transition: var(--ap-cube-1);
+
+                &:hover {
+                    color: var(--ap-clr-pr-1);
+                    background-size: 100% 1px;
+                }
             }
         }
 
@@ -155,6 +166,13 @@
                 opacity: 1;
                 visibility: visible;
                 transform: scale(1);
+            }
+
+            .item-btn {
+                &:hover {
+                    transform: scale(.9);
+                    color: #fff;
+                }
             }
         }
 

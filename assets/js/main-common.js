@@ -8,6 +8,32 @@
 (function ($) {
 "use strict";
 
+// 	lenis-smooth-scroll-activation
+const lenis = new Lenis({
+	duration: .8,
+    easing: (t) => 1 - Math.pow(1 - t, 3),
+	direction: 'vertical', 
+	wheelMultiplier: 0.85,
+	smoothWheel: true,
+	smoothTouch: false,
+});
+function raf(time) {
+	lenis.raf(time);
+	requestAnimationFrame(raf);
+}
+requestAnimationFrame(raf);
+$('a[href^="#"]').on('click', function (e) {
+	e.preventDefault(); 
+
+	const target = $(this.getAttribute('href')); 
+
+	if (target.length) {
+        lenis.scrollTo(target[0], {
+            duration: 1.15,
+            easing: (t) => 1 - Math.pow(1 - t, 3),
+        });
+	}
+});
 
 
 CustomEase.create("ease1", "0.77, 0, 0.175, 1");
@@ -540,6 +566,44 @@ gsap.utils.toArray(".wa_zoomOut_img").forEach(wa_zoomOut_img => {
 });
 
 	
+
+// benefits-card-scroll-animation
+if ($(".ap-benefits-1-wrap").length) {
+	const waBenefitsItems = gsap.utils.toArray(".ap-benefits-1-item");
+
+	waBenefitsItems.forEach((item) => {
+		const waBenefitsDot = item.querySelector(".dot-shape");
+		gsap.set(waBenefitsDot, { xPercent: -50 });
+	});
+
+	const waBenefitsTl = gsap.timeline({
+		scrollTrigger: {
+			trigger: ".ap-benefits-1-wrap",
+			start: "top 80%",
+			toggleActions: "play none none none",
+			once: true,
+		},
+	});
+
+	waBenefitsItems.forEach((item, i) => {
+		const waBenefitsDot = item.querySelector(".dot-shape");
+		const waBenefitsTitle = item.querySelector(".title");
+		const waBenefitsDisc = item.querySelector(".disc");
+
+		waBenefitsTl
+			.fromTo(waBenefitsDot,
+				{ x: -40, opacity: 0 },
+				{ x: 0, opacity: 1, duration: 0.45, ease: "power2.out" },
+				i * 0.3
+			)
+			.fromTo([waBenefitsTitle, waBenefitsDisc],
+				{ y: 20, opacity: 0 },
+				{ y: 0, opacity: 1, duration: 0.5, ease: "power2.out", stagger: 0.1 },
+				"-=0.15"
+			);
+	});
+}
+
 
 // wa_parallax_elm
 if($(".wa_parallax_elm").length) {

@@ -1,0 +1,110 @@
+/* 
+    benefits-1-start
+*/
+.ap-benefits-1 {
+    &-area {
+        background-color: #171717;
+    }
+    &-sec-title {
+        display: flex;
+        align-items: center;
+        gap: 40px;
+        flex-wrap: wrap;
+        justify-content: space-between;
+
+        .left {
+            max-width: 660px;
+        }
+
+        .right {
+            max-width: 395px;
+        }
+
+        
+    }
+
+
+    &-wrap {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        align-items: start;
+
+        @media #{$xl} {
+            gap: 60px 40px;
+        }
+
+        @media #{$lg} {
+            gap: 60px 40px;
+            grid-template-columns: 1fr 1fr 1fr;
+        }
+
+        @media #{$md} {
+            gap: 60px 40px;
+            grid-template-columns: 1fr 1fr;
+        }
+
+        @media #{$xs} {
+            gap: 60px 40px;
+            grid-template-columns: 1fr;
+        }
+    }
+    
+    &-item {
+        position: relative;
+        z-index: 1;
+        border-bottom: 1px solid var(--ap-clr-pr-1);
+        padding-bottom: 50px;
+
+        .title {
+            font-size: 20px;
+            margin-bottom: 20px;
+
+            span {
+                color: var(--ap-clr-pr-1);
+                margin-right: 20px;
+            }
+        }
+
+        .disc {
+            margin-left: 50px;
+
+            @media #{$xl,$lg,$md,$xs} {
+                margin-left: 0px;
+            }
+        }
+
+        .dot-shape {
+            width: 8px;
+            height: 8px;
+            background-color: var(--ap-clr-pr-1);
+            border-radius: 50%;
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            bottom: -4px;
+
+        }
+
+        &:nth-child(odd) {
+            margin-top: 179px;
+            border-top: 1px solid var(--ap-clr-pr-1);
+            border-bottom: none;
+            padding-bottom: 0;
+            padding-top: 50px;
+
+            .dot-shape {
+                bottom: unset;
+                top: -4px;
+            }
+
+            @media #{$xl,$lg,$md,$xs} {
+                margin-top: 0px;
+            }
+        }
+    }
+    
+
+}
+/* 
+    benefits-1-end
+*/

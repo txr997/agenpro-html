@@ -49,6 +49,11 @@
             margin-bottom: 70px;
         }
         
+        .shape-1 {
+            img {
+                animation: ap-vector-color-shift 4s linear infinite;
+            }
+        }
     }
     
     &-counter {

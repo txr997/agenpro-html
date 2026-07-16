@@ -1,0 +1,122 @@
+/* 
+    testimonial-1-start
+*/
+.ap-testimonial-1 {
+    &-sec-title {
+        .ap-sec-title-1 {
+            .author-img {
+                display: inline-flex;
+                transform: translateY(9px);
+
+                &-single {
+                    width: 52px;
+                    height: 52px;
+                    border: 4px solid #111111;
+                    border-radius: 12px;
+                    display: inline-flex;
+
+                    &:not(:first-child) {
+                        margin-left: -20px;
+                    }
+                }
+            }
+        }
+
+
+    }
+
+
+    &-wrap {
+        display: grid;
+        gap: 24px;
+        grid-template-columns: 1fr 1fr 1fr;
+        align-items: start;
+
+        @media #{$lg} {
+            grid-template-columns: 1fr 1fr;
+        }
+
+        @media #{$md,$xs} {
+            grid-template-columns: 1fr;
+        }
+    }
+    
+    
+    &-card {
+        .icon-x-content {
+            background: #171717;
+            border-radius: 16px;
+            display: flex;
+            gap: 30px;
+            padding: 40px 40px;
+            margin-bottom: 20px;
+            transition: var(--ap-cube-1);
+
+            @media #{$xl,$lg,$md,$xs} {
+                padding: 40px 20px;
+            }
+
+            .icon {
+                flex: 0 0 auto;
+            }
+
+            .comment {
+                font-size: 20px;
+                color: #DFDFDF;
+                opacity: 1;
+            }
+        }
+
+        .img-x-logo {
+            display: flex;
+            align-items: center;
+            flex-wrap: wrap;
+            margin-bottom: 20px;
+        }
+
+        .img-elm {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+        }
+        
+        .logo-elm {
+            width: 60px;
+            height: 60px;
+            background: #171717;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+        }
+        
+        .name {
+            font-size: 20px;
+            margin-bottom: 6px;
+        }
+        
+        .bio {
+            font-size: 16px;
+        }
+
+        &:hover {
+            .icon-x-content {
+                background-color: var(--ap-clr-pr-1);
+
+                .icon {
+                    img {
+                        filter: brightness(0) invert(1);
+                    }
+                }
+            }
+        }
+    }
+
+
+    
+    
+
+}
+/* 
+    testimonial-1-end
+*/

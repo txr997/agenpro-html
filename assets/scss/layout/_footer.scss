@@ -1,0 +1,136 @@
+/* 
+    footer-1-start
+*/
+.ap-footer-1 {
+    &-area {
+        background: #171717;
+    }
+
+    &-wrap {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        gap: 50px;
+    }
+    
+    &-logo {
+        margin-bottom: 24px;
+    }
+
+    &-content {
+        max-width: 290px;
+
+        .disc {
+            opacity: 70%;
+            margin-bottom: 50px;
+        }
+        
+    }
+
+
+    &-social{
+        display: flex;
+        gap: 8px;
+        flex-wrap: wrap;
+
+        .link-elm {
+            width: 48px;
+            height: 48px;
+            background: #1F1F1F;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #fff;
+            border-radius: 50%;
+            transition: var(--ap-cube-1);
+
+            &:hover {
+                background-color: var(--ap-clr-pr-1);
+            }
+        }
+    }
+    
+    &-widget {
+        .widget-title {
+            font-family: var(--ap-font-1);
+            color: #fff;
+            font-size: 24px;
+            margin-bottom: 32px;
+        }
+
+        ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+
+            li {
+                a {
+                    position: relative;
+                    display: inline-flex;
+                    align-items: center;
+                    overflow: hidden;
+                    font-family: var(--ap-font-1);
+                    color: #DFDFDF;
+                    opacity: 80%;
+                    font-size: 18px;
+                    line-height: 1.5;
+                    transition: var(--ap-cube-1);
+
+                    span {
+                        display: block;
+                        transition: var(--ap-cube-1);
+                    }
+
+                    &::before {
+                        content: attr(data-text);
+                        position: absolute;
+                        left: 0;
+                        top: 100%;
+                        color: var(--ap-clr-pr-1);
+                        transition: var(--ap-cube-1);
+                    }
+
+                    &:hover {
+                        opacity: 1;
+
+                        span {
+                            transform: translateY(-100%);
+                        }
+
+                        &::before {
+                            transform: translateY(-100%);
+                        }
+                    }
+
+                }
+
+            }
+        }
+    }
+
+    &-bottom {
+        border-top: 1px solid rgb(223 223 223 / 10%);
+        padding: 28px 0;
+
+        &-elm {
+            text-align: center;
+            opacity: 1;
+
+            a {
+                color: var(--ap-clr-pr-1);
+
+                &:hover {
+                    color: #fff;
+                }
+            }
+        }
+    }
+    
+}
+
+/* 
+    footer-1-end
+*/

@@ -191,3 +191,112 @@
 /* 
     projects-1-end
 */
+
+/* 
+    projects-2-start
+*/
+.ap-projects-2 {
+    &-area {
+        background-color: #171717;
+    }
+    &-wrap {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 24px;
+
+        @media #{$lg,$md} {
+            grid-template-columns: 1fr 1fr ;
+        }
+
+        @media #{$xs} {
+            grid-template-columns: 1fr ;
+        }
+    }
+
+    &-item {
+        padding-bottom: 32px;
+        position: relative;
+        z-index: 1;
+
+        &::after {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            left: auto;
+            right: 0;
+            width: 0%;
+            height: 1px;
+            background-color: #fff;
+            transition: var(--ap-cube-1);
+        }
+
+        .img {
+            &-box {
+                height: 480px;
+                border-radius: 16px;
+                position: relative;
+                z-index: 1;
+                margin-bottom: 32px;
+            }
+
+            &-btn-box {
+                position: absolute;
+                inset: 0;
+                width: 100%;
+                height: 100%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                transition: var(--ap-cube-1);
+                opacity: 0;
+                visibility: hidden;
+            }
+            
+        }
+
+        .content-box {
+            padding: 0 10px;
+        }
+
+        .item-meta {
+            display: flex;
+            gap: 20px;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            margin-bottom: 26px;
+        }
+
+        .title {
+            font-size: 24px;
+            font-weight: 400;
+            transition: var(--ap-cube-1);
+
+            @media #{$lg,$md,$xs} {
+                font-size: 22px;
+            }
+
+            &:hover {
+                color: var(--ap-clr-pr-1);
+            }
+        }
+
+        &:hover {
+            &::after {
+                left: 0;
+                right: auto;
+                width: 100%;
+            }
+            .img-btn-box {
+                visibility: visible;
+                opacity: 1;
+            }
+        }
+    }
+    
+}
+
+
+
+/* 
+    projects-2-end
+*/

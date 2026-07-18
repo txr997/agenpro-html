@@ -440,6 +440,27 @@ function afterPageLoad() {
 }
 
 
+
+if (document.querySelector('.mb_testimonial2_slider')) {
+	new Swiper('.mb_testimonial2_slider', {
+		loop: true,
+		speed: 800,
+		spaceBetween: 24,
+		slidesPerView: 1,
+		navigation: {
+			nextEl: '.mb_testimonial2_slider_next',
+			prevEl: '.mb_testimonial2_slider_prev',
+		},
+		pagination: {
+			el: '.mb_testimonial2_slider_dots',
+			clickable: true,
+		},
+		breakpoints: {
+			1200: { slidesPerView: 2 },
+		},
+	});
+}
+
 // services-1-slider
 var mb_services1_slider = new Swiper(".mb_services1_slider", {
 	loop: true,
@@ -624,8 +645,53 @@ if (window.matchMedia("(min-width: 1200px)").matches) {
 
 }
 
+// services-2-hover-image-follow
+if ($('.ap-services-2-item-single').length) {
+	gsap.utils.toArray('.ap-services-2-item-single').forEach((mbS2Item) => {
+
+		const mbS2Img = mbS2Item.querySelector('.img-elm');
+		if (!mbS2Img) return;
+
+		gsap.set(mbS2Img, { rotate: 12, scale: .8 });
+
+		const mbS2X = gsap.quickTo(mbS2Img, "x", { duration: .6, ease: "power3.out" });
+		const mbS2Y = gsap.quickTo(mbS2Img, "y", { duration: .6, ease: "power3.out" });
+
+		function mbS2Move(e, instant) {
+			const mbS2Rect = mbS2Item.getBoundingClientRect();
+			mbS2X(e.clientX - mbS2Rect.left, instant);
+			mbS2Y(e.clientY - mbS2Rect.top, instant);
+		}
+
+		mbS2Item.addEventListener('mouseenter', (e) => {
+			mbS2Move(e, true);
+
+			gsap.to(mbS2Img, {
+				opacity: 1,
+				scale: 1,
+				duration: .5,
+				ease: "power3.out",
+				overwrite: "auto",
+			});
+		});
+
+		mbS2Item.addEventListener('mousemove', (e) => mbS2Move(e));
+
+		mbS2Item.addEventListener('mouseleave', () => {
+			gsap.to(mbS2Img, {
+				opacity: 0,
+				scale: .8,
+				duration: .4,
+				ease: "power3.out",
+				overwrite: "auto",
+			});
+		});
+
+	});
+}
+
 // about-2-img
-if (window.matchMedia("(min-width: 1400px)").matches) { 
+if (window.matchMedia("(min-width: 1400px)").matches) {
 	const mbH2tl = gsap.timeline({
 		scrollTrigger: {
 		  trigger: ".mb-about-2-img-2", 

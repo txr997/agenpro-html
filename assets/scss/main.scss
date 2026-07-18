@@ -1,7 +1,7 @@
 
 @import  './abstracts/common';
 @import  './abstracts/utility';
-/* 
+/*
     components
 */
 @import  './components/container';
@@ -14,7 +14,7 @@
 @import  './components/wow-plus';
 @import  './components/elements';
 @import  './components/back-to-top';
-/* 
+/*
     layout
 */
 @import  './layout/header';
@@ -25,6 +25,9 @@
 @import  './layout/features';
 @import  './layout/choose';
 @import  './layout/projects';
+@import  './layout/we-do';
+@import  './layout/pricing';
+@import  './layout/funfact';
 @import  './layout/clients';
 @import  './layout/join-us';
 @import  './layout/step';
@@ -32,8 +35,9 @@
 @import  './layout/benefits';
 @import  './layout/blog';
 @import  './layout/contact';
+@import  './layout/faqs';
 @import  './layout/footer';
-/* 
+/*
     pages
 */
 @import  './pages/home-page';

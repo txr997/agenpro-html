@@ -1,0 +1,105 @@
+/* 
+    faqs-2-start
+*/
+.ap-accordion {
+    &-item {
+        border-bottom: 1px solid #1F1F1F;
+        .item-title {
+            background: transparent;
+            width: 100%;
+            font-size: 20px;
+            font-weight: 400;
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            padding: 24px 12px;
+            padding-left: 20px;
+            text-align: left;
+            transition: 0.2s;
+
+
+            .number {
+                color: var(--ap-clr-pr-1);
+            }
+    
+
+            .icon {
+                margin-left: auto;
+                transition: 0.2s;
+                font-size: 18px;
+                width: 50px;
+                height: 50px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                border-radius: 50px;
+                flex: 0 0 auto;
+                border: 1px solid #1F1F1F;
+                transition: var(--ap-cube-1);
+
+                i {
+                    transition: 0.2s;
+                }
+            }
+    
+            &:is(:not(.collapsed)) {
+                .icon {
+                    border-color: var(--ap-clr-pr-1);
+                    color: var(--ap-clr-pr-1);
+                    transform: rotate(-180deg);
+                }
+
+            }
+
+            &:is(.collapsed) {
+                &:hover {
+                }
+            }
+
+        }
+        
+        .item-disc {
+            padding: 25px 20px;
+            padding-top: 0;
+            max-width: 700px;
+        }
+
+        .accordion-collapse {
+            &:is(.show) {
+
+            }
+        } 
+
+        &:is(.active) {
+        }
+
+    }
+
+    
+}
+
+.ap-faqs-2 {
+    &-area {
+        background-color: #171717;
+    }
+
+    &-wrap {
+        display: grid;
+        gap: 110px;
+        grid-template-columns: 1.7fr 1fr;
+        align-items: center;
+
+        @media #{$md,$xs} {
+            grid-template-columns: 1fr;
+            gap: 50px;
+        }
+    }
+    
+    &-img {
+        height: 596px;
+        border-radius: 16px;
+    }
+}
+/* 
+    faqs-2-end
+*/

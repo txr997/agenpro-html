@@ -129,6 +129,10 @@
     &-left {
         max-width: 746px;
         width: 100%;
+
+        @media #{$xl,$lg,$md,$xs} {
+            max-width: 646px;
+        }
     }
 
     &-img {
@@ -142,6 +146,15 @@
         &-inner {
             display: flex;
             gap: 90px;
+
+            @media #{$xl,$lg,$md} {
+                gap: 40px;
+            }
+
+            @media #{$xs} {
+                flex-wrap: wrap;
+                gap: 40px;
+            }
         }
     
     }    
@@ -156,9 +169,17 @@
             display: flex;
             line-height: 1;
 
+            @media #{$xl,$lg,$md,$xs} {
+                font-size: 120px;
+            }
+
             .plus {
                 font-size: 50px;
             }
+        }
+
+        .disc {
+            text-align: center;
         }
     }
 

@@ -1,0 +1,189 @@
+/*
+    pricing-2-start
+*/
+
+.ap-pricing-2 {
+    &-area {
+        background-color: #171717;
+    }
+    &-wrap {
+        display: flex;
+        gap: 50px;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+
+    &-content {
+        max-width: 476px;
+        width: 100%;
+
+        .sec-disc {
+            color: #DFDFDF;
+            margin-top: 16px;
+        }
+
+        .btn-elm {
+            margin-top: 48px;
+        }
+    }
+
+    &-info-list {
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+        margin-top: 32px;
+
+        .single {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+
+            i {
+                font-size: 24px;
+                color: var(--ap-clr-pr-1);
+                flex: 0 0 auto;
+            }
+
+            .disc {
+                font-size: 16px;
+                color: #DFDFDF;
+            }
+        }
+    }
+
+    &-item-wrap {
+        max-width: 746px;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        gap: 24px;
+
+        @media #{$xl} {
+            max-width: 576px;
+        }
+
+        @media #{$lg} {
+            max-width: 396px;
+        }
+    }
+
+    &-item-single {
+        background-color: #1B1B1B;
+        border-radius: 16px;
+        padding: 40px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 40px;
+        flex-wrap: wrap;
+
+        @media #{$xs} {
+            padding: 30px 24px;
+        }
+
+        .title-wrap {
+            max-width: 266px;
+            width: 100%;
+
+            .title {
+                font-size: 20px;
+                margin-bottom: 20px;
+            }
+
+            .price {
+                font-size: 40px;
+                line-height: 1.4;
+
+                span {
+                    font-weight: 300;
+                    font-size: 18px;
+                    color: #DFDFDF;
+                }
+            }
+
+            .disc {
+                color: #DFDFDF;
+                margin-top: 16px;
+            }
+
+            .item-btn {
+                display: inline-flex;
+                align-items: center;
+                justify-content: center;
+                padding: 11px 32px;
+                border-radius: 120px;
+                border: 1px solid var(--ap-clr-pr-1);
+                font-weight: 400;
+                color: #DFDFDF;
+                margin-top: 48px;
+                transition: var(--ap-cube-1);
+
+                &:hover {
+                    background-color: var(--ap-clr-pr-1);
+                    color: #fff;
+                }
+            }
+        }
+
+        &.active .title-wrap .item-btn {
+            background-color: var(--ap-clr-pr-1);
+            color: #fff;
+
+            &:hover {
+                background-color: transparent;
+                color: #DFDFDF;
+            }
+        }
+
+        .list-wrap {
+            max-width: 340px;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            gap: 24px;
+            border-left: 1px solid #2E2E2E;
+            padding-left: 48px;
+
+            @media #{$xs} {
+                border-left: 0;
+                padding-left: 0;
+            }
+
+            .single {
+                display: flex;
+                align-items: center;
+                gap: 12px;
+
+                .dot-icon {
+                    width: 20px;
+                    height: 20px;
+                    flex: 0 0 auto;
+                    border-radius: 50%;
+                    border: 1px solid var(--ap-clr-pr-1);
+                    position: relative;
+
+                    &::after {
+                        content: "";
+                        width: 8px;
+                        height: 8px;
+                        border-radius: 50%;
+                        background-color: var(--ap-clr-pr-1);
+                        position: absolute;
+                        top: 50%;
+                        left: 50%;
+                        transform: translate(-50%, -50%);
+                    }
+                }
+
+                .disc {
+                    font-size: 16px;
+                    color: #DFDFDF;
+                }
+            }
+        }
+    }
+}
+
+/*
+    pricing-2-end
+*/

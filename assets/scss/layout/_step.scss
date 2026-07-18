@@ -160,3 +160,147 @@
 /* 
     step-1-end
 */
+/* 
+    step-2-start
+*/
+.ap-step-2 {
+    &-area {
+        background-color: #171717;
+    }
+
+    &-wrap {
+        display: flex;
+        align-items: center;
+        gap: 100px;
+        flex-wrap: wrap;
+        justify-content: space-between;
+
+        @media #{$xl,$lg} {
+            gap: 60px;
+        }
+
+        @media #{$md,$xs} {
+            gap: 50px;
+        }
+    }
+
+    &-img {
+        max-width: 526px;
+        width: 100%;
+        height: 708px;
+        border-radius: 16px;
+
+        @media #{$lg} {
+            max-width: 420px;
+            height: 600px;
+        }
+
+        @media #{$md,$xs} {
+            height: 500px;
+        }
+    }
+
+    &-list {
+        max-width: 636px;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        gap: 40px;
+
+        @media #{$xl,$lg} {
+            max-width: 446px;
+        }
+    }
+
+    &-item {
+        display: flex;
+        align-items: stretch;
+        gap: 40px;
+
+        @media #{$xs} {
+            gap: 24px;
+        }
+
+        .line-shape {
+            width: 40px;
+            flex: 0 0 auto;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 10px;
+
+            .icon {
+                width: 40px;
+                height: 40px;
+                flex: 0 0 auto;
+                border-radius: 50%;
+                background-color: var(--ap-clr-pr-1);
+                color: #fff;
+                font-size: 18px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+
+            &::after {
+                content: "";
+                flex: 1 0 0;
+                width: 2px;
+                background-image: repeating-linear-gradient(to bottom, rgb(255 70 37 / 70%) 0 6px, transparent 6px 12px);
+                background-size: 2px 12px;
+                background-repeat: repeat-y;
+                animation: ap-step-2-dash 1s linear infinite;
+
+                @media (prefers-reduced-motion: reduce) {
+                    animation: none;
+                }
+            }
+        }
+
+        .content-wrap {
+            padding: 8px 0;
+
+            .step-tag {
+                font-size: 20px;
+                color: #DFDFDF;
+                opacity: 60%;
+                margin-bottom: 32px;
+                transition: var(--ap-cube-1);
+            }
+
+            .title {
+                font-size: 24px;
+                margin-bottom: 12px;
+                transition: var(--ap-cube-1);
+            }
+
+            .disc {
+                color: #DFDFDF;
+            }
+        }
+
+        &:hover {
+            .content-wrap .step-tag {
+                opacity: 100%;
+            }
+
+            .content-wrap .title {
+                color: var(--ap-clr-pr-1);
+                text-decoration: underline;
+            }
+        }
+    }
+}
+
+@keyframes ap-step-2-dash {
+    from {
+        background-position-y: 0;
+    }
+    to {
+        background-position-y: 12px;
+    }
+}
+
+/*
+    step-2-end
+*/

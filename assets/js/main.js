@@ -439,20 +439,40 @@ function afterPageLoad() {
 */
 }
 
+// about-2-img
+if (window.matchMedia("(min-width: 1400px)").matches) {
+	const funfact2 = gsap.timeline({
+		scrollTrigger: {
+		  trigger: ".ap-funfact-2-img", 
+		  start: "top 50%", 
+		  toggleActions: "play none none none", 
+		  markers: false 
+		}
+	});
+
+	funfact2.from(".ap-funfact-2-img .bg-shape circle", { 
+		yPercent: 50,
+	})
+	funfact2.from(".ap-funfact-2-img img", { 
+		yPercent: 50,
+	},"<50%")
+
+}
 
 
-if (document.querySelector('.mb_testimonial2_slider')) {
-	new Swiper('.mb_testimonial2_slider', {
+
+if (document.querySelector('.ap_testimonial2_slider')) {
+	new Swiper('.ap_testimonial2_slider', {
 		loop: true,
 		speed: 800,
 		spaceBetween: 24,
 		slidesPerView: 1,
 		navigation: {
-			nextEl: '.mb_testimonial2_slider_next',
-			prevEl: '.mb_testimonial2_slider_prev',
+			nextEl: '.ap_testimonial2_slider_next',
+			prevEl: '.ap_testimonial2_slider_prev',
 		},
 		pagination: {
-			el: '.mb_testimonial2_slider_dots',
+			el: '.ap_testimonial2_slider_dots',
 			clickable: true,
 		},
 		breakpoints: {

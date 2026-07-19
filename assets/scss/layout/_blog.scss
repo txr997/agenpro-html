@@ -147,3 +147,106 @@
 /* 
     blog-1-end
 */
+/* 
+    blog-2-start
+*/
+.ap-blog-2 {
+    &-wrap {
+        display: grid;
+        gap: 24px;
+        grid-template-columns: 1fr 1fr 1fr;
+
+        @media #{$md} {
+            grid-template-columns: 1fr 1fr;
+        }
+
+        @media #{$xs} {
+            grid-template-columns: 1fr;
+            gap: 50px;
+        }
+    }
+
+    &-item {
+        display: flex;
+        flex-direction: column;
+        gap: 34px;
+
+        .item-img {
+            height: 320px;
+            border-radius: 16px;
+
+            img {
+                transition: var(--ap-cube-1);
+            }
+        }
+
+        .content-wrap {
+            padding: 0 12px;
+        }
+        .title {
+            font-size: 24px;
+            margin-bottom: 12px;
+
+            @media #{$xl,$lg,$md,$xs} {
+                font-size: 22px;
+            }
+
+            a {
+                text-decoration: underline;
+                text-decoration-color: transparent;
+                text-decoration-thickness: 1px;
+                text-underline-offset: 4px;
+                transition: text-decoration-color 0.4s ease;
+
+                &:hover {
+                    text-decoration-color: currentColor;
+                    color: var(--ap-clr-pr-1);
+                }
+            }
+        }
+        .disc {
+            margin-bottom: 33px;
+        }
+
+        .item-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 12px;
+            font-weight: 400;
+            font-size: 18px;
+            transition: var(--ap-cube-1);
+
+            .icon {
+                width: 32px;
+                height: 32px;
+                display: inline-flex;
+                align-items: center;
+                justify-content: center;
+                background: #1F1F1F;
+                border-radius: 50%;
+                font-size: 16px;
+            }
+
+            &:hover {
+                color: #fff;
+
+                .icon {
+                    background-color: var(--ap-clr-pr-1);
+                }
+
+            }
+        }
+
+        &:hover {
+            .item-img {
+                img {
+                    transform: scale(1.05);
+                }
+            }
+        }
+    }    
+}
+
+/* 
+    blog-2-end
+*/

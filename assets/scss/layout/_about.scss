@@ -199,3 +199,103 @@
 /* 
     about-2-end
 */
+
+/* 
+    about-3-start
+*/
+.ap-about-3 {
+    &-sec-title {
+        display: flex;
+        gap: 40px;
+        flex-wrap: wrap;
+        justify-content: space-between;
+
+        .left {
+            max-width: 740px;
+        }
+    }
+
+    &-wrap {
+        display: grid;
+        gap: 100px;
+        grid-template-columns: 1fr 1.3fr;
+
+        @media #{$md,$xs} {
+            gap: 50px;
+            grid-template-columns: 1fr;
+        }
+    }
+
+    &-img {
+        height: 560px;
+        border-radius: 12px;
+    }
+    
+
+    &-disc {
+        font-size: 20px;
+        margin-top: 32px;
+        margin-bottom: 32px;
+    }
+
+    &-list {
+        display: flex;
+        flex-direction: column;
+        gap: 18px;
+        margin-bottom: 45px;
+
+        .single {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+
+            .dot-icon {
+                width: 20px;
+                height: 20px;
+                flex: 0 0 auto;
+                border-radius: 50%;
+                border: 1px solid var(--ap-clr-pr-1);
+                position: relative;
+
+                &::after {
+                    content: "";
+                    width: 8px;
+                    height: 8px;
+                    border-radius: 50%;
+                    background-color: var(--ap-clr-pr-1);
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%, -50%);
+                }
+            }
+
+            .disc {
+                font-size: 16px;
+                color: #DFDFDF;
+            }
+        }
+    }
+
+    &-right {
+        position: relative;
+        z-index: 1;
+        .ap-about-1-video {
+            @media #{$lg,$md,$xs} {
+                margin-top: 50px;
+            }
+            @media #{$over,$xxxl,$xxl,$xl} {
+                height: 250px;
+                position: absolute;
+                right: 0;
+                bottom: 0;
+            }
+        }
+    }
+}
+
+
+
+/* 
+    about-3-end
+*/

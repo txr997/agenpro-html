@@ -177,3 +177,129 @@
 /* 
     choose-2-end
 */
+
+/* 
+    choose-3-start
+*/
+.ap-choose-3 {
+    &-sec-title {
+        display: flex;
+        align-items: center;
+        gap: 40px;
+        justify-content: space-between;
+
+        @media #{$md,$xs} {
+            flex-wrap: wrap;
+        }
+
+        .left {
+            max-width: 450px;
+        }
+
+        .right {
+            max-width: 400px;
+        }
+
+        .sec-disc {
+            margin-bottom: 32px;
+        }
+    }
+
+    &-wrap {
+        display: grid;
+        gap: 70px;
+        grid-template-columns: 1fr 1.08fr;
+
+        @media #{$md,$xs} {
+            grid-template-columns: 1fr;
+        }
+    }
+
+    &-left {
+        .left-disc {
+            font-size: 20px;
+            margin-bottom: 20px;
+        }
+    }
+    &-img {
+        height: 520px;
+        border-radius: 12px;
+    }
+
+    &-counter {
+        display: flex;
+        gap: 40px;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        margin-top: 110px;
+
+        &-item {
+            max-width: 260px;
+            width: 100%;
+
+            .number {
+                font-size: 75px;
+                line-height: 1;
+                color: var(--ap-clr-pr-1);
+            }
+    
+            .disc {
+                text-transform: uppercase;
+                opacity: 1;
+                margin-bottom: 20px;
+            }
+        }
+    }
+
+
+    &-card {
+        display: grid;
+        gap: 24px;
+        grid-template-columns: 1fr 1fr 1fr;
+
+        @media #{$md} {
+            grid-template-columns: 1fr 1fr;
+        }
+        @media #{$xs} {
+            grid-template-columns: 1fr;
+        }
+
+        &-single {
+            padding: 40px;
+            border-radius: 12px;
+            background-color: #171717;
+
+            @media #{$xl,$lg,$md,$xs} {
+                padding: 40px 20px;  
+            }
+
+            .title-x-icon {
+                display: flex;
+                align-items: center;
+                border-bottom: 1px solid rgb(223 223 223 / 10%);
+                justify-content: space-between;
+                padding-bottom: 30px;
+                margin-bottom: 30px;
+            }
+            
+
+            .title {
+                font-size: 24px;
+                max-width: 210px;
+                font-weight: 500;
+                line-height: 1.3;
+
+                @media #{$xl,$lg,$md,$xs} {
+                    font-size: 22px;
+                }
+            }
+        }
+    }
+    
+
+}
+
+
+/* 
+    choose-3-end
+*/

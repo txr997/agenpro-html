@@ -273,3 +273,101 @@
 /* 
     services-2-end
 */
+
+/* 
+    services-3-start
+*/
+.ap-services-3 {
+    &-area {
+        background-color: #171717;
+    }
+
+
+    &-wrap {
+        display: flex;
+        gap: 50px;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+    
+    &-content {
+        max-width: 636px;
+
+
+        @media #{$xl,$lg,$md,$xs} {
+            max-width: 446px;
+        }
+
+        .ap-sec-title-1 {
+            margin-bottom: 15px;
+
+            span {
+                display: inline;
+            }
+        }
+
+        .sec-disc {
+            margin-bottom: 45px;
+        }
+    }
+    
+    
+    
+    &-accordion {
+        max-width: 526px;
+        width: 100%;
+
+        @media #{$lg} {
+            max-width: 436px;
+        }
+
+        .ap-accordion-item {
+            border: 1px solid #1F1F1F;
+            border-radius: 12px;
+            background-color: #171717;
+
+            .item-title {
+
+                justify-content: space-between;
+                font-weight: 600;
+                text-transform: uppercase;
+                padding: 37px 40px;
+                padding-bottom: 45px;
+
+                @media #{$lg,$md,$xs} {
+                    padding: 37px 20px;
+                    padding-bottom: 45px;
+                }
+            }
+
+
+            .img-elm {
+                margin: 0 40px;
+                margin-bottom: 60px;
+                height: 182px;
+                border-radius: 12px;
+
+                @media #{$lg,$md,$xs} {
+                    margin: 0 20px;
+                    margin-bottom: 60px;
+                }
+            }
+
+
+            &:is(.active) {
+                background-color: var(--ap-clr-pr-1);
+
+                .number {
+                    color: #fff;
+                }
+            }
+
+            &:not(:first-child) {
+                margin-top: -20px;
+            }
+        }
+    }
+}
+/* 
+    services-3-end
+*/

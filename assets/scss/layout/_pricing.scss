@@ -187,3 +187,128 @@
 /*
     pricing-2-end
 */
+
+/*
+    pricing-3-start
+*/
+.ap-price-3 {
+    &-wrap {
+        display: grid;
+        gap: 24px;
+        grid-template-columns: 2.05fr 1fr;
+        align-items: start;
+
+        @media #{$md,$xs} {
+            grid-template-columns: 1fr;
+        }
+    }
+
+    &-sec-title {
+        .ap-sec-title-1 {
+            margin-bottom: 16px;
+        }
+    }
+
+    &-card {
+        display: flex;
+        flex-direction: column;
+        gap: 24px;
+        .ap-pricing-2-item-single {
+            padding: 30px 40px;
+            .list-wrap {
+                max-width: 400px;
+            }
+
+
+            .item-btn {
+                margin-top: 30px;
+            }
+        }
+    }
+    &-right {
+        background-color: #171717;
+        border-radius: 16px;
+        padding: 60px 40px;
+
+        @media #{$lg,$md,$xs} {
+            padding: 60px 20px;
+        }
+
+        .icon-elm {
+            width: 72px;
+            height: 72px;
+            background: var(--ap-clr-pr-1);
+            color: #fff;
+            font-size: 26px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 12px;
+            margin-bottom: 40px;
+        }
+
+        .title {
+            font-size: 32px;
+            margin-bottom: 12px;
+        }
+
+        .disc {
+            color: #DFDFDF;
+            margin-bottom: 48px;
+        }
+
+        .ap-pr-btn-1 {
+            width: 100%;
+            margin-bottom: 20px;
+            .text {
+                width: 100%;
+            }
+        }
+
+        .note {
+            color: #DFDFDF;
+            position: relative;
+            z-index: 1;
+            padding-left: 15px;
+
+            &::after {
+                content: "";
+                width: 8px;
+                height: 8px;
+                border-radius: 50%;
+                background-color: var(--ap-clr-pr-1);
+                position: absolute;
+                top: 9px;
+                left: 0;
+            }
+        }
+    }
+
+
+    &-features {
+        &-list {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 20px;
+            align-items: center;
+
+            .item {
+                display: flex;
+                align-items: center;
+                gap: 10px;
+                font-size: 16px;
+                opacity: 1;
+
+                i {
+                    color: var(--ap-clr-pr-1);
+                }
+            }
+        }
+    }
+}
+
+
+/*
+    pricing-3-end
+*/

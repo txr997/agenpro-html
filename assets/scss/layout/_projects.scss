@@ -346,6 +346,14 @@
         display: grid;
         gap: 24px;
         grid-template-columns: 1fr 1fr 1fr;
+
+        @media #{$lg} {
+            grid-template-columns: 1fr 1fr ;
+        }
+
+        @media #{$md,$xs} {
+            grid-template-columns: 1fr  ;
+        }
     }
 
 

@@ -481,6 +481,16 @@ if (document.querySelector('.ap_testimonial2_slider')) {
 	});
 }
 
+
+if ($('.ap_testimonial3_slider').length) {
+	const ap_testimonial3_slider = new Swiper('.ap_testimonial3_slider', {
+		loop: true,
+		speed: 800,
+		spaceBetween: 32,
+		slidesPerView: "auto",
+	});
+}
+
 // services-1-slider
 var mb_services1_slider = new Swiper(".mb_services1_slider", {
 	loop: true,

@@ -103,3 +103,113 @@
 /* 
     faqs-2-end
 */
+/* 
+    faqs-3-start
+*/
+.ap-faqs-3 {
+    &-wrap {
+        display: grid;
+        gap: 80px;
+        grid-template-columns: 1fr 1.6fr;
+
+        @media #{$md,$xs} {
+            grid-template-columns: 1fr;
+        }
+    }
+
+    &-tabs {
+        &-btn {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+            margin-bottom: 25px;
+
+            .nav-link {
+                background: #171717;
+                font-size: 20px;
+                border-radius: 12px;
+                width: 100%;
+                text-align: left;
+                padding: 21px 21px;
+                transition: var(--ap-cube-1);
+
+                &:hover {
+                    background-color: var(--ap-clr-pr-1);
+                    color: #fff;
+                }
+
+                &:is(.active) {
+                    background-color: var(--ap-clr-pr-1);
+                    color: #fff;
+                }
+            }
+        }
+
+        &-pane {
+            .ap-accordion {
+                gap: 20px;
+                display: flex;
+                flex-direction: column;
+
+                &-item {
+                    background-color: #171717;
+                    border: 1px solid transparent;
+                    border-radius: 12px;
+
+                    .item-title {
+                        padding: 19px 24px;
+                    }
+
+
+                    .item-disc {
+                        padding: 25px 24px;
+                        padding-top: 0;
+                    }
+
+                    &:is(.active) {
+                        border-color: var(--ap-clr-pr-1);
+                        box-shadow: 0px 4px 0px 0px var(--ap-clr-pr-1);
+                    }
+                }
+            }
+        }
+    }
+
+    &-contact {
+        text-align: center;
+        background: #171717;
+        border-radius: 12px;
+        padding: 40px 40px;
+
+        .icon-elm {
+            font-size: 55px;
+            color: #fff;
+            margin-bottom: 25px;
+        }
+
+        .title {
+            font-size: 24px;
+            margin-bottom: 12px;
+        }
+
+        .disc {
+            margin-bottom: 32px;
+        }
+
+        .ap-pr-btn-1 {
+            width: 100%;
+
+            .text {
+                width: 100%;
+            }
+        }
+        
+    }
+    
+    
+}
+
+
+/* 
+    faqs-3-end
+*/

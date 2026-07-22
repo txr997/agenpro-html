@@ -161,6 +161,15 @@
         justify-content: space-between;
         flex-wrap: wrap;
         gap: 20px;
+
+        &-elm {
+            &:hover {
+                img {
+                    animation: pulse 1s;
+                }
+            }
+        }
+
     }
 }
 /* 

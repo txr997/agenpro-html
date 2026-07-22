@@ -248,6 +248,7 @@
                     font-weight: 300;
                     color: #DFDFDF;
                     gap: 12px;
+                    transition: var(--ap-cube-1);
 
                     
                     @media #{$xl,$lg,$md,$xs} {
@@ -263,6 +264,15 @@
                         justify-content: center;
                         align-items: center;
                         font-size: 22px;
+                    }
+
+                    &:hover {
+                        color: var(--ap-clr-pr-1);
+
+                        .icon {
+                            transform: rotate(45deg);
+                            color: #fff;
+                        }
                     }
                 }
             }

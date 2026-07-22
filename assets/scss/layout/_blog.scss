@@ -250,3 +250,114 @@
 /* 
     blog-2-end
 */
+
+/* 
+    blog-3-start
+*/
+.ap-blog-3 {
+    &-wrap {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 24px;
+
+        @media #{$lg,$md,$xs} {
+            grid-template-columns: 1fr;
+        }
+    }
+
+    &-item {
+        display: grid;
+        grid-template-columns: 1fr 1.08fr;
+        align-items: center;
+        perspective: 2000px;
+        transform-style: preserve-3d;
+
+        @media #{$xs} {
+            grid-template-columns: 1fr ;
+        }
+
+        @media #{$sm} {
+            grid-template-columns: 1fr 1.08fr;
+        }
+
+
+        .blog-img {
+            height: 320px;
+            border-radius: 16px;
+            transition: var(--ap-cube-1);
+        }
+        
+        .blog-meta {
+            opacity: 1;
+            color: #DFDFDF;
+            display: flex;
+            justify-content: space-between;
+            gap: 10px 20px;
+            border-bottom: 1px solid rgb(223 223 223 / 20%);
+            padding-bottom: 20px;
+            align-items: center;
+            margin-bottom: 24px;
+            flex-wrap: wrap;
+
+
+            .line {
+                width: 48px;
+                height: 1px;
+                background: #fff;
+                opacity: 30%;
+            }
+        }
+
+        .title {
+            font-size: 24px;
+            margin-bottom: 70px;
+            transition: var(--ap-cube-1);
+
+            &:hover {
+                color: var(--ap-clr-pr-1);
+            }
+        }
+        
+        .content-wrap {
+            padding: 24px;
+        }
+        
+        .blog-btn {
+            opacity: 1;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            transition: var(--ap-cube-1);
+            .icon {
+                width: 32px;
+                height: 32px;
+                background: #1F1F1F;
+                display: inline-flex;
+                align-items: center;
+                justify-content: center;
+                border-radius: 50%;
+                font-size: 16px;
+                transition: var(--ap-cube-1);
+            }
+
+            &:hover {
+                color: var(--ap-clr-pr-1);
+                .icon {
+                    background-color: var(--ap-clr-pr-1);
+                    color: #fff;
+                }
+            }
+        }
+
+        &:hover {
+            .blog-img {
+                transform: rotateY(12deg);
+            }
+        }
+    }
+}
+
+
+/* 
+    blog-3-end
+*/

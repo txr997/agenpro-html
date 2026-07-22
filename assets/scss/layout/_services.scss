@@ -293,6 +293,10 @@
     &-content {
         max-width: 636px;
 
+        @media #{$over,$xxxl,$xxl} {
+            position: sticky;
+            top: 100px;
+        }
 
         @media #{$xl,$lg,$md,$xs} {
             max-width: 446px;

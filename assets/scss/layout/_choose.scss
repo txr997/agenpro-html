@@ -293,6 +293,14 @@
                     font-size: 22px;
                 }
             }
+
+            &:hover {
+                .icon-elm {
+                    img {
+                        animation: swing 1s;
+                    }
+                }
+            }
         }
     }
     
